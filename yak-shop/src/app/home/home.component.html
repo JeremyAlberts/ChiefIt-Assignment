@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h1>Our Yaks</h1>
+  <ng-container *ngIf="herd$ | async as herd; else noData">
+    <div class="row">
+      <div
+        class="card m-2"
+        style="width: 18rem"
+        *ngFor="let yak of herd"
+        [class.bg-warning]="yak.age >= 10"
+      >
+        <div class="card-body">
+          <h5 class="card-title">{{ yak.name }}</h5>
+          <p class="card-text">Age: {{ yak.age.toFixed(2) }} years</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Last Shaved: {{ yak.ageLastShaved }}</li>
+          <li class="list-group-item">Sex: {{ yak.sex }}</li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noData>
+    <p>No herd data available.</p>
+  </ng-template>
+</div>

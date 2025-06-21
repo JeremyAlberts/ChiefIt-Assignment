@@ -1,0 +1,40 @@
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+    >
+      <a
+        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+        routerLink="/home"
+        routerLinkActive="active"
+      >
+        <img class="logo" src="/assets/images/yak.png" height="50" alt="Logo" />
+      </a>
+
+      <ul
+        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+      >
+        <li>
+          <a
+            href="#"
+            class="nav-link px-2 text-secondary"
+            routerLink="/home"
+            routerLinkActive="text-white"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="nav-link px-2 text-secondary"
+            routerLink="/order"
+            routerLinkActive="text-white"
+            >Order</a
+          >
+        </li>
+      </ul>
+
+      <app-day></app-day>
+    </div>
+  </div>
+</header>
