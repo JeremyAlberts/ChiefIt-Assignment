@@ -2,32 +2,21 @@
 
 YakShop is a .NET Core Web API that simulates a fictional yak-based e-commerce system. It tracks a herd of yaks, calculates their milk and skin production over time, and allows orders to be placed based on available resources.
 
----
-
-## 📦 Features
-
-- Track yak herd state over time
-- Calculate milk and skin output by day
-- Submit and process customer orders
-- Reset herd and stock data
-- RESTful API endpoints
-
----
 
 ## 🚀 Getting Started
 
-### Prerequisites
+## 🛠️ Running the Project
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download)
-- Visual Studio 2022 or VS Code
-- [Postman](https://www.postman.com/) or `curl` for testing endpoints (optional)
+### 1. Clone the Repository
 
-### Installation
-
-```bash
 git clone https://github.com/yourusername/YakShop.git
-cd YakShop
 
-dotnet restore
-dotnet build
-dotnet run --project YakShop.Api
+### 2. Open the Solution in Visual Studio
+- Open the folder you just cloned.
+- Double-click on YakShop.sln to open the solution in Visual Studio 2022 or later.
+- In the Solution Explorer, right-click on the YakShop.Api project and select "Set as Startup Project".
+- Press F5 or click the "Start" button to run the app.
+
+### 3. Run front-end
+- cd into yak-shop
+- "ng serve" to start app
