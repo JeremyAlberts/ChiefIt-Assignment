@@ -1,9 +1,11 @@
-﻿using YakShop.Core.Commands;
+﻿using FluentValidation;
+using YakShop.Core.Commands;
 using YakShop.Core.Constants;
 using YakShop.Core.Entities;
 using YakShop.Core.Interfaces.Repository;
 using YakShop.Core.Interfaces.Services;
 using YakShop.Core.Operation;
+using YakShop.Core.Validation;
 
 namespace YakShop.Core.Services
 {
@@ -77,6 +79,9 @@ namespace YakShop.Core.Services
         {
             try
             {
+                OrderValidator validator = new OrderValidator();
+                validator.ValidateAndThrow(command);
+
                 await AdvanceDays(days);
                 var (skins, milk) = await _yakShopRepository.GetStock();
 
@@ -94,12 +99,11 @@ namespace YakShop.Core.Services
                     Milk = command.Order.Milk > milk ? null : command.Order.Milk,
                 };
 
-                if (result.Skins == null || result.Milk == null)
-                {
-                    return OperationResult<OrderResult>.Success(result, OperationStatus.Partial);
-                }
+                var status = (deliverableSkins == null || deliverableMilk == null)
+                    ? OperationStatus.Partial
+                    : OperationStatus.Created;
 
-                return OperationResult<OrderResult>.Success(result, OperationStatus.Created);
+                return OperationResult<OrderResult>.Success(result, status);
             }
             catch (Exception ex)
             {
@@ -132,10 +136,13 @@ namespace YakShop.Core.Services
 
             for (int i = 0; i < days; i++)
             {
-                var herdWithDaysAdded = AddDay(herd);
+                //var herdWithDaysAdded = AddDay(herd);
 
                 foreach (var yak in herd)
                 {
+                    var newAge = yak.Age + YakConstants.DayInYear;
+
+                    yak.SetAge(newAge);
                     skins += yak.Shave();
                     milk += yak.Milk();
                 }
@@ -151,9 +158,7 @@ namespace YakShop.Core.Services
         {
             foreach (var yak in herd)
             {
-                var newAge = yak.Age + YakConstants.DayInYear;
-
-                yak.SetAge(newAge);
+                
             }
 
             return herd;

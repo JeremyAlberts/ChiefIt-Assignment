@@ -7,7 +7,6 @@
         Error,
         Created,
         Exception,
-        NotFound,
         ResetContent,
         Partial
     }

@@ -29,13 +29,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 205
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "YakShop.API.Controllers.YakShopController",

@@ -13,7 +13,6 @@ namespace YakShop.API.Controllers
             {
                 OperationStatus.Ok => result.Data is null ? NoContent() : Ok(result.Data),
                 OperationStatus.Error or OperationStatus.Exception => BadRequest(errorMessage),
-                OperationStatus.NotFound => NotFound(errorMessage),
                 OperationStatus.None => NoContent(),
                 OperationStatus.Created => CreatedAtAction("order", result.Data),
                 OperationStatus.ResetContent => StatusCode(205),

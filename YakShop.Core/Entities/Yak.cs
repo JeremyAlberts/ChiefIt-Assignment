@@ -41,8 +41,10 @@ namespace YakShop.Core.Entities
 
         public void SetAge(decimal age)
         {
-            if (age <= YakConstants.YakDeathAge && !IsDead)
+            if (age <= YakConstants.YakDeathAge && !IsDead) { 
                 Age = age;
+                return;
+            }
 
             Died();
 

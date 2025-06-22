@@ -46,13 +46,14 @@ export class OrderComponent implements OnInit {
 
       this.yakshopService.submitOrder(command).subscribe({
         next: (res) => {
-          console.log('Order placed:', res);
           this.yakshopService.refreshStock();
           this.router.navigate(['/thank-you'], {
             state: { orderResult: res },
           });
         },
-        error: (err) => console.error('Order failed:', err),
+        error: () => {
+          this.router.navigate(['/thank-you']);
+        },
       });
     }
   }

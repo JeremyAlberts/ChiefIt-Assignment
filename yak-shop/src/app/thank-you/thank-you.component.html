@@ -1,6 +1,24 @@
-<div class="container">
-  <h1>Thank you</h1>
-  <p>Your order is being processed</p>
-  <p *ngIf="orderResult?.milk">Milk: {{ orderResult.milk }}</p>
-  <p *ngIf="orderResult?.skins">Milk: {{ orderResult.skins }}</p>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col">
+      <ng-container
+        *ngIf="
+          orderResult?.milk != null && orderResult?.skins != null;
+          else partialOrFailed
+        "
+      >
+        <h1>Thank you</h1>
+        <p>Your order is being processed.</p>
+        <p>Milk: {{ orderResult.milk }}</p>
+        <p>Skins: {{ orderResult.skins }}</p>
+      </ng-container>
+
+      <ng-template #partialOrFailed>
+        <h1>Sorry!</h1>
+        <p class="text-danger">
+          Unfortunately, we could not fulfill any part of your order.
+        </p>
+      </ng-template>
+    </div>
+  </div>
 </div>

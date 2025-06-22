@@ -160,3 +160,5 @@ C:\Users\Jeremy\source\repos\YakShop\YakShop.API\obj\Debug\net8.0\refint\YakShop
 C:\Users\Jeremy\source\repos\YakShop\YakShop.API\obj\Debug\net8.0\YakShop.API.pdb
 C:\Users\Jeremy\source\repos\YakShop\YakShop.API\obj\Debug\net8.0\YakShop.API.genruntimeconfig.cache
 C:\Users\Jeremy\source\repos\YakShop\YakShop.API\obj\Debug\net8.0\ref\YakShop.API.dll
+C:\Users\Jeremy\source\repos\YakShop\YakShop.API\obj\Debug\net8.0\YakShop.API.sourcelink.json
+C:\Users\Jeremy\source\repos\YakShop\YakShop.API\bin\Debug\net8.0\FluentValidation.dll

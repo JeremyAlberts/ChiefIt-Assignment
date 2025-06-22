@@ -6,10 +6,15 @@
         class="card m-2"
         style="width: 18rem"
         *ngFor="let yak of herd"
-        [class.bg-warning]="yak.age >= 10"
+        [class.bg-danger]="yak.age >= 10"
       >
         <div class="card-body">
-          <h5 class="card-title">{{ yak.name }}</h5>
+          <h5
+            class="card-title"
+            [class.text-decoration-line-through]="yak.age >= 10"
+          >
+            {{ yak.name }}
+          </h5>
           <p class="card-text">Age: {{ yak.age.toFixed(2) }} years</p>
         </div>
 

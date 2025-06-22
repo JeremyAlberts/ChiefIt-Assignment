@@ -9,3 +9,5 @@ C:\Users\Jeremy\source\repos\YakShop\YakShop.Core\obj\Debug\net8.0\YakShop.Core.
 C:\Users\Jeremy\source\repos\YakShop\YakShop.Core\obj\Debug\net8.0\refint\YakShop.Core.dll
 C:\Users\Jeremy\source\repos\YakShop\YakShop.Core\obj\Debug\net8.0\YakShop.Core.pdb
 C:\Users\Jeremy\source\repos\YakShop\YakShop.Core\obj\Debug\net8.0\ref\YakShop.Core.dll
+C:\Users\Jeremy\source\repos\YakShop\YakShop.Core\obj\Debug\net8.0\YakShop.Core.sourcelink.json
+C:\Users\Jeremy\source\repos\YakShop\YakShop.Core\obj\Debug\net8.0\YakShop.Core.csproj.AssemblyReference.cache

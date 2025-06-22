@@ -15,3 +15,4 @@ C:\Users\Jeremy\source\repos\YakShop\YakShop.Infrastructure\obj\Debug\net8.0\ref
 C:\Users\Jeremy\source\repos\YakShop\YakShop.Infrastructure\obj\Debug\net8.0\YakShop.Infrastructure.pdb
 C:\Users\Jeremy\source\repos\YakShop\YakShop.Infrastructure\obj\Debug\net8.0\YakShop.Infrastructure.genruntimeconfig.cache
 C:\Users\Jeremy\source\repos\YakShop\YakShop.Infrastructure\obj\Debug\net8.0\ref\YakShop.Infrastructure.dll
+C:\Users\Jeremy\source\repos\YakShop\YakShop.Infrastructure\obj\Debug\net8.0\YakShop.Infrastructure.sourcelink.json

@@ -18,7 +18,6 @@ namespace YakShop.API.Controllers
         }
 
         [HttpPost("load")]
-        [ProducesResponseType(205)]
         public async Task<IActionResult> Load(HerdCreateDTO herd)
         {
             var command = herd.ToCommand();

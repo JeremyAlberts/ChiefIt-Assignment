@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "62AI5566We4=",
+  "dgSpecHash": "0wQv8neBUrc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Jeremy\\source\\repos\\YakShop\\YakShop.Core\\YakShop.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Jeremy\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
