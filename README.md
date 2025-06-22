@@ -3,8 +3,6 @@
 YakShop is a .NET Core Web API that simulates a fictional yak-based e-commerce system. It tracks a herd of yaks, calculates their milk and skin production over time, and allows orders to be placed based on available resources.
 
 
-## 🚀 Getting Started
-
 ## 🛠️ Running the Project
 
 ### 1. Clone the Repository
